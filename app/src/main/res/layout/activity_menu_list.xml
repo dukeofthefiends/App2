@@ -58,7 +58,7 @@
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="30dp"
+                    android:layout_width="31dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
                     android:id="@+id/addbutton"
