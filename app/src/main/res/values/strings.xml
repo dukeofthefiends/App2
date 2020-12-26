@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">App2</string>
+    <string name="ban1"> Bàn 1</string>
+    <string name="ban2"> Bàn 2</string>
+    <string name="ban3"> Bàn 3</string>
+    <string name="ban5"> Bàn 5</string>
+
+    <string name="ban6"> Bàn 6</string>
+
+    <string name="ban4">Bàn 4</string>
+</resources>
