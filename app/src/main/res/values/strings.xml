@@ -3,9 +3,16 @@
     <string name="ban1"> Bàn 1</string>
     <string name="ban2"> Bàn 2</string>
     <string name="ban3"> Bàn 3</string>
-    <string name="ban5"> Bàn 5</string>
-
+    <string name="ban4"> Bàn 4</string>
+     <string name="ban5"> Bàn 5</string>
     <string name="ban6"> Bàn 6</string>
+    
+    <string name="cocktail"> Cocktail</string>
+    <string name="price_cocktail"> 30.000 vnd</string>
+    <string name="orange_juice"> Orange Juice</string>
+    <string name="price_orage_juice"> 20.000 vnd</string>
+    <string name="juice"> Juice</string>
+    <string name="price_juice"> 15.000 vnd</string>
 
-    <string name="ban4">Bàn 4</string>
+    <string name=""
 </resources>

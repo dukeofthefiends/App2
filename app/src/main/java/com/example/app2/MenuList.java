@@ -10,9 +10,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MenuList extends AppCompatActivity {
 
-    CircleImageView addbutton, addbutton2;
-    TextView textView;
-    int i = 0;
+    CircleImageView addbutton, subbutton,addbutton2,subbutton2,addbutton3,subbutton3;
+    TextView textView,textView2,textView3;
+    int i1 = 0;
+    int i2 = 0;
+    int i3 = 0;
+
     String number;
 
     @Override
@@ -21,29 +24,82 @@ public class MenuList extends AppCompatActivity {
         setContentView(R.layout.activity_menu_list);
 
         addbutton = findViewById(R.id.addbutton);
-        addbutton2 = findViewById(R.id.subbutton);
+        subbutton = findViewById(R.id.subbutton);
+        addbutton2 = findViewById(R.id.addbutton2);
+        subbutton2 = findViewById(R.id.subbutton2);
+        addbutton3 = findViewById(R.id.addbutton3);
+        subbutton3 = findViewById(R.id.subbutton3);
+
         textView = findViewById(R.id.textViewAmount1);
+        textView2 = findViewById(R.id.textViewAmount2);
+        textView3 = findViewById(R.id.textViewAmount3);
+
         textView.setText("0");
+        textView2.setText("0");
+        textView3.setText("0");
+
 
         addbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = i+1;
-                number = String.valueOf(i);
+                i1 = i1+1;
+                number = String.valueOf(i1);
                 textView.setText(number);
             }
         });
 
-        addbutton2.setOnClickListener(new View.OnClickListener() {
+        subbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(i>0)
+                if(i1>0)
                  {
-                     i = i -1;
-                     number = String.valueOf(i);
+                     i1 = i1 -1;
+                     number = String.valueOf(i1);
                      textView.setText(number);
                  }
 
+            }
+        });
+
+        addbutton2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                i2 = i2+1;
+                number = String.valueOf(i2);
+                textView2.setText(number);
+            }
+        });
+
+        subbutton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(i2>0)
+                {
+                    i2--;
+                    number = String.valueOf(i2);
+                    textView2.setText(number);
+                }
+            }
+        });
+
+        addbutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i3++;
+                number = String.valueOf(i3);
+                textView3.setText(number);
+            }
+        });
+
+        subbutton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(i3>0)
+                {
+                    i3--;
+                    number = String.valueOf(i3);
+                    textView3.setText(number);
+                }
             }
         });
     }
