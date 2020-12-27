@@ -7,12 +7,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "Employee.db";
-    public static final String TABLE_NAME = "EMP_table";
+    public static final String DATABASE_NAME = "Menu.db";
+    public static  final String TABLE_NAME ="A_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "TIME";
     public static final String COL_3 = "SUM";
     public static final String COL_4 = "AMOUNT";
+   // public static final String COL_5 = "TABLEE";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -20,8 +21,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,COMPANY TEXT,DESIGNATION TEXT," +
-                "PHNO INTEGER)");
+        db.execSQL("create table "  + TABLE_NAME+" (ID INTEGER PRIMARY KEY AUTOINCREMENT,TIME TEXT,SUM TEXT,AMOUNT TEXT," +
+                "TABLEE INTEGER)");
     }
 
     @Override
@@ -30,13 +31,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(String id,String time,String sum,String amount) {
+    public boolean insertData(String id,String time,String sum,String amount ) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,id);
         contentValues.put(COL_2,time);
         contentValues.put(COL_3,sum);
         contentValues.put(COL_4,amount);
+//        contentValues.put(COL_5,table);
         long result = db.insert(TABLE_NAME,null ,contentValues);
         if(result == -1)
             return false;
@@ -50,13 +52,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean updateData(String id,String name,String company,String designation,String phno) {
+    public boolean updateData(String id,String time,String sum,String amount) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1,id);
-        contentValues.put(COL_2,name);
-        contentValues.put(COL_3,company);
-        contentValues.put(COL_4,designation);
+        contentValues.put(COL_2,time);
+        contentValues.put(COL_3,amount);
+//        contentValues.put(COL_4,table);
         db.update(TABLE_NAME, contentValues, "ID = ?",new String[] { id });
         return true;
     }
