@@ -13,6 +13,8 @@
     <string name="price_orage_juice"> 20.000 vnd</string>
     <string name="juice"> Juice</string>
     <string name="price_juice"> 15.000 vnd</string>
-
-    <string name=""
+    <string name="beer"> Beer</string>
+    <string name="price_beer"> 15.000 vnd</string>
+    <string name="pay"> thanh toán</string>
+    <string name="total_bill"> 0 </string>
 </resources>
