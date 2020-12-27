@@ -40,7 +40,7 @@
 
                 <TextView
 
-                    android:id="@+id/textViewPrice1"
+                    android:id="@+id/moneyCocktail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -170,7 +170,6 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
-
             app:srcCompat="@drawable/juice" />
 
         <LinearLayout
@@ -318,9 +317,13 @@
 
         <TextView
             android:id="@+id/textView_totalBill"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
+            android:hint="0 VNĐ"
+            android:textColor="@color/black"
+            android:textColorHint="@color/teal_200"
+            android:gravity="center"
             android:text="" />
 
         <Button
