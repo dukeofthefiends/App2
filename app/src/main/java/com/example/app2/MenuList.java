@@ -17,7 +17,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MenuList extends AppCompatActivity {
 
-    CircleImageView addbutton, subbutton,addbutton2,subbutton2,addbutton3,subbutton3;
+    CircleImageView addbuttonCocktail, subbuttonCocktail,addbuttonOrange,subbuttonOrange,addbutton3,subbutton3;
     TextView textView,textView2,textView3, moneyCocktail, total_bill;
     Button button_pay;
     int i1 = 0;
@@ -40,16 +40,16 @@ public class MenuList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_list);
 
-        addbutton = findViewById(R.id.addbutton);
-        subbutton = findViewById(R.id.subbutton);
-        addbutton2 = findViewById(R.id.addbutton2);
-        subbutton2 = findViewById(R.id.subbutton2);
+        addbuttonCocktail = findViewById(R.id.addbuttonCocktail);
+        subbuttonCocktail = findViewById(R.id.subbuttonCocktail);
+        addbuttonOrange = findViewById(R.id.addbuttonOrange);
+        subbuttonOrange = findViewById(R.id.subbuttonOrange);
         addbutton3 = findViewById(R.id.addbutton3);
         subbutton3 = findViewById(R.id.subbutton3);
         button_pay = findViewById(R.id.button_pay);
 
-        textView = findViewById(R.id.textViewAmount1);
-        textView2 = findViewById(R.id.textViewAmount2);
+        textView = findViewById(R.id.textViewAmountCocktail);
+        textView2 = findViewById(R.id.textViewAmountOrange);
         textView3 = findViewById(R.id.textViewAmount3);
         moneyCocktail = findViewById(R.id.moneyCocktail);
         total_bill = findViewById(R.id.textView_totalBill);
@@ -62,7 +62,7 @@ public class MenuList extends AppCompatActivity {
         myDb = new DatabaseHelper(this);
         AddData();
 
-        addbutton.setOnClickListener(new View.OnClickListener() {
+        addbuttonCocktail.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
@@ -77,7 +77,7 @@ public class MenuList extends AppCompatActivity {
             }
         });
 
-        subbutton.setOnClickListener(new View.OnClickListener() {
+        subbuttonCocktail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(i1>0)
@@ -94,7 +94,7 @@ public class MenuList extends AppCompatActivity {
             }
         });
 
-        addbutton2.setOnClickListener(new View.OnClickListener(){
+        addbuttonOrange.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 i2 = i2+1;
@@ -107,7 +107,7 @@ public class MenuList extends AppCompatActivity {
             }
         });
 
-        subbutton2.setOnClickListener(new View.OnClickListener() {
+        subbuttonOrange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(i2>0)
